@@ -1,16 +1,26 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
-         @vite('resources/js/app.js')
-    </head>
-    <body>
-        <div class="container">
-            <h1>Template Classe 89</h1>
-            <img src="{{ Vite::asset('resources/img/pluto.webp') }}" alt="" srcset="">
-        </div>
+<!-- include layout -->
+@extends('layouts.app')
 
-    </body>
-</html>
+<!-- section header -->
+@section('page.header')
+    <div class="container">
+        <h1>header</h1>
+    </div>
+@endsection
+<!-- /section header -->
+
+<!-- section main -->
+@section('page.main')
+    <div class="container">
+        <p>main</p>
+    </div>
+@endsection
+<!-- /section main -->
+
+<!-- section footer -->
+@section('page.footer')
+    <div class="container">
+        <h5>footer</h5>
+    </div>
+@endsection
+<!-- /section footer -->
