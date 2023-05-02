@@ -12,7 +12,12 @@
 <!-- section main -->
 @section('page.main')
     <div class="container">
-        <p>main</p>
+        <h3>CURRENT SERIES</h3>
+        <ul>
+            @foreach ($comics as $item)
+                <li>{{ $item['title'] }}</li>
+            @endforeach
+        </ul>
     </div>
 @endsection
 <!-- /section main -->
