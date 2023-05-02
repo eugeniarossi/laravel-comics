@@ -4,7 +4,16 @@
 <!-- section header -->
 @section('page.header')
     <div class="container">
-        <h1>header</h1>
+        <a href="#">
+            <img src="/dc-logo.png" alt="dc logo">
+        </a>
+        <nav>
+            <ul>
+                @foreach ($navLinks as $link)
+                    <li>{{ $link }}</li>
+                @endforeach
+            </ul>
+        </nav>
     </div>
 @endsection
 <!-- /section header -->
