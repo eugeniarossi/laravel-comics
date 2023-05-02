@@ -1,22 +1,24 @@
 <!-- include layout -->
 @extends('layouts.app')
 
-<!-- section header -->
-@section('page.header')
+<!-- section header top -->
+@section('header.top')
     <div class="container">
-        <a href="#">
-            <img src="/dc-logo.png" alt="dc logo">
-        </a>
-        <nav>
-            <ul>
-                @foreach ($navLinks as $link)
-                    <li>{{ $link }}</li>
-                @endforeach
-            </ul>
-        </nav>
+        <a href="#">dc power visa</a>
+        <a href="#">additional dc sites</a>
     </div>
 @endsection
-<!-- /section header -->
+<!-- /section header top -->
+
+<!-- section header bottom -->
+@section('header.bottom.nav')
+    <ul>
+        @foreach ($navLinks as $link)
+            <li><a href="#">{{ $link }}</a></li>
+        @endforeach
+    </ul>
+@endsection
+<!-- /section header bottom -->
 
 <!-- section main -->
 @section('page.main')

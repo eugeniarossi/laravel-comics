@@ -1,2 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 @import "_partials/typo.scss";
+
+@import '_partials/variables.scss';
+@import '_partials/mixin.scss';
+@import '_partials/header.scss';
+@import '_partials/main.scss';
+@import '_partials/footer.scss';

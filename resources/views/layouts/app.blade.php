@@ -7,11 +7,13 @@
          @vite('resources/js/app.js')
     </head>
     <body>
-        <!-- include header -->
-        @include('shared.header')
-        <!-- include main -->
-        @include('shared.main')
-        <!-- include footer -->
-        @include('shared.footer')
+        <div class="main-container">
+            <!-- include header -->
+            @include('shared.header')
+            <!-- include main -->
+            @include('shared.main')
+            <!-- include footer -->
+            @include('shared.footer')
+        </div>
     </body>
 </html>
