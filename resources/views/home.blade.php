@@ -21,15 +21,13 @@
 <!-- /section header bottom -->
 
 <!-- section main -->
-@section('page.main')
-    <div class="container">
-        <h3>CURRENT SERIES</h3>
-        <ul>
-            @foreach ($comics as $item)
-                <li>{{ $item['title'] }}</li>
-            @endforeach
-        </ul>
-    </div>
+@section('main.content')
+    <h3>CURRENT SERIES</h3>
+    <ul>
+        @foreach ($comics as $item)
+            <li>{{ $item['title'] }}</li>
+        @endforeach
+    </ul>
 @endsection
 <!-- /section main -->
 

@@ -1,3 +1,21 @@
 main {
     width: 100%;
+
+    .jumbotron {
+        background-image: url('../images/jumbotron.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 25rem;
+    }
+
+    .container {
+        max-width: 75rem;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .625rem;
+        }
+    }
 }
