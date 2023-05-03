@@ -105,7 +105,22 @@
 
     <div class="bottom">
         <div class="container">
-            <h5>footer</h5>
+            <div class="sign-up">
+                <a href="#">
+                    sign-up now!
+                </a>
+            </div>
+
+            <nav>
+                <h2>follow us</h2>
+                <ul>
+                    <li v-for="link in footerNavLinks">
+                        <a href="#">
+                            <img src="/images/" alt="social">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </footer>
