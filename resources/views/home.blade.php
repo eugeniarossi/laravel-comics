@@ -20,21 +20,33 @@
 @endsection
 <!-- /section header bottom -->
 
-<!-- section main -->
+<!-- section main content -->
 @section('main.content')
-    <h3>CURRENT SERIES</h3>
     <ul>
         @foreach ($comics as $item)
-            <li>{{ $item['title'] }}</li>
+            <li><a href="#">{{ $item['title'] }}</a></li>
         @endforeach
     </ul>
 @endsection
-<!-- /section main -->
+<!-- /section main content -->
+
+<!-- section main nav -->
+@section('main.nav')
+    <ul>
+        @foreach ($mainNavLinks as $link)
+            <li>
+                <a href="#">
+                    <img src="{{ $link['src'] }}" alt="#">
+                    <div>{{ $link['name'] }}</div>
+                </a>
+            </li>
+        @endforeach
+    </ul>
+@endsection
+<!-- /section main nav -->
 
 <!-- section footer -->
 @section('page.footer')
-    <div class="container">
-        <h5>footer</h5>
-    </div>
+    
 @endsection
 <!-- /section footer -->

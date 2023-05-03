@@ -1,17 +1,9 @@
 header {
-
-    .header-top>.container,
-    .header-bottom>.container {
-        max-width: 75rem;
-        margin: 0 auto;
-        display: flex;
-    }
-
     .header-top {
-        width: 100%;
         background-color: $primary-color;
 
         .container {
+            display: flex;
             font-size: .8125rem;
             justify-content: flex-end;
 
@@ -23,7 +15,7 @@ header {
     }
 
     .header-bottom {
-        width: 100%;
+        height: 7.5rem;
 
         .container {
             display: flex;
@@ -32,6 +24,7 @@ header {
 
             ul {
                 display: flex;
+                height: 100%;
                 gap: 2.125rem;
                 list-style: none;
 

@@ -1,0 +1,33 @@
+footer {
+    .top {
+        background-image: url('/resources/images/footer-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #menu {
+                display: flex;
+                flex-grow: 1;
+                gap: 2rem;
+                color: #fff;
+                padding: 2.5rem 0rem;
+            
+                .menu-section {
+                    h3 {
+                        margin-bottom: .625rem;
+                    }
+            
+                    ul {
+                        margin-bottom: .75rem;
+                        font-size: small;
+                        color: #959595;
+                    }
+                }
+            }
+        }
+    }
+}

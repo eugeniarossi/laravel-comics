@@ -14,11 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
+    
     $data = [
-        'logo' => '/images/dc-logo.png',
+        'logo' => "Vite::asset('/resources/images/dc-logo.png')",
         'navLinks' => ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
-        'comics' => config('comics')
+        'comics' => config('db.comics'),
+        'mainNavLinks' => [
+            [
+                'src' => '/images/buy-comics-digital-comics.png',
+                'name' => 'digital comics'
+            ], [
+                'src' => '/images/buy-comics-merchandise.png',
+                'name' => 'dc merchandise'
+            ], [
+                'src' => '/images/buy-comics-subscriptions.png',
+                'name' => 'subscription'
+            ], [
+                'src' => '/images/buy-comics-shop-locator.png',
+                'name' => 'comic shop locator'
+            ], [
+                'src' => '/images/buy-dc-power-visa.svg',
+                'name' => 'dc power visa'
+            ]
+        ]
     ];
 
     return view('home', $data);
