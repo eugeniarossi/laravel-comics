@@ -45,12 +45,14 @@ Route::get('/home', function () {
 /* /ROUTE HOME */
 
 /* ROUTE PRODUCT */
-Route::get('/product', function () {
+Route::get('/product/{index}', function ($index) {
+
+    $comics = config('db.comics');
     
     $data = [
         'logo' => "Vite::asset('/resources/images/dc-logo.png')",
         'navLinks' => ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
-        'comics' => config('db.comics'),
+        'comic' => $comics[$index],
         'mainNavLinks' => [
             [
                 'src' => '/images/buy-comics-digital-comics.png',
@@ -72,5 +74,5 @@ Route::get('/product', function () {
     ];
 
     return view('product', $data);
-})->name('product');
+})->name('product')->where('index', '[0-9]+');
 /* /ROUTE PRODUCT */
