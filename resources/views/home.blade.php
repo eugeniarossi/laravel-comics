@@ -20,30 +20,45 @@
 @endsection
 <!-- /section header bottom -->
 
-<!-- section main content -->
-@section('main.content')
-    <ul>
-        @foreach ($comics as $item)
-            <li><a href="#">{{ $item['title'] }}</a></li>
-        @endforeach
-    </ul>
+<!-- section main -->
+@section('main')
+    <div class="home-main">
+        <!-- main-content -->
+        <div class="main-content">
+            <div class="container">
+                <h5>CURRENT SERIES</h5>
+                <section>  
+                    <ul>
+                        @foreach ($comics as $item)
+                            <li><a href="#">{{ $item['title'] }}</a></li>
+                        @endforeach
+                    </ul>
+                </section>
+                <button>LOAD MORE</button>
+            </div>
+        </div>
+        <!-- /main-content -->
+        <!-- nav -->
+        <nav>
+            <div class="container">
+                <nav>
+                    <ul>
+                        @foreach ($mainNavLinks as $link)
+                            <li>
+                                <a href="#">
+                                    <img src="{{ $link['src'] }}" alt="#">
+                                    <div>{{ $link['name'] }}</div>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <!-- /nav -->
+    </div>
+    <!-- /section main -->
 @endsection
-<!-- /section main content -->
-
-<!-- section main nav -->
-@section('main.nav')
-    <ul>
-        @foreach ($mainNavLinks as $link)
-            <li>
-                <a href="#">
-                    <img src="{{ $link['src'] }}" alt="#">
-                    <div>{{ $link['name'] }}</div>
-                </a>
-            </li>
-        @endforeach
-    </ul>
-@endsection
-<!-- /section main nav -->
 
 <!-- section footer -->
 @section('page.footer')
