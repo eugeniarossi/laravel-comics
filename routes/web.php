@@ -2,17 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 /* ROUTE HOME */
 Route::get('/home', function () {
     
@@ -45,10 +34,14 @@ Route::get('/home', function () {
 /* /ROUTE HOME */
 
 /* ROUTE PRODUCT */
-Route::get('/product/{index}', function ($index) {
+Route::get('/product/{index}', function($index) {
 
-    $comics = config('db.comics');
-    
+    $comics = config('db.comics');         
+
+    if ($index > count($comics) - 1) {
+        abort(404);
+    }
+
     $data = [
         'logo' => "Vite::asset('/resources/images/dc-logo.png')",
         'navLinks' => ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop'],
@@ -72,7 +65,6 @@ Route::get('/product/{index}', function ($index) {
             ]
         ]
     ];
-
     return view('product', $data);
 })->name('product')->where('index', '[0-9]+');
-/* /ROUTE PRODUCT */
+/* ROUTE PRODUCT */

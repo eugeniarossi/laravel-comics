@@ -9,35 +9,41 @@
 @endsection
 <!-- /section header top -->
 
-<!-- section header bottom -->
-@section('header.bottom.nav')
-    <ul>
-        @foreach ($navLinks as $link)
-            <li><a href="#">{{ $link }}</a></li>
-        @endforeach
-    </ul>
+<!-- section main -->
+@section('main')
+    <div class="product-main">
+        <!-- main-content -->
+        <div class="main-content">
+            <div class="container">
+                <section>  
+                    <ul>
+                        <li><a href=""><h1>{{ $comic['title'] }}</h1></a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <!-- /main-content -->
+        <!-- nav -->
+        <nav>
+            <div class="container">
+                <nav>
+                    <ul>
+                        @foreach ($mainNavLinks as $link)
+                            <li>
+                                <a href="#">
+                                    <img src="{{ $link['src'] }}" alt="#">
+                                    <div>{{ $link['name'] }}</div>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <!-- /nav -->
+    </div>
+    <!-- /section main -->
 @endsection
-<!-- /section header bottom -->
-
-<!-- section main content -->
-@section('main.content')
-    <ul>
-        <li>
-            <a href="#">prodotto</a>
-        </li>
-    </ul>
-@endsection
-<!-- /section main content -->
-
-<!-- section main nav -->
-@section('main.nav')
-    <ul>
-        <li>
-            <a href="#">link</a>
-        </li>
-    </ul>
-@endsection
-<!-- /section main nav -->
 
 <!-- section footer -->
 @section('page.footer')
